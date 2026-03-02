@@ -2,6 +2,9 @@ GROUP_TYPE = "coop"
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 # 六种实验物品
 items = ["A4纸", "胶带", "垃圾袋", "纸杯", "笔", "牙刷"]
