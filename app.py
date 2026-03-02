@@ -41,7 +41,7 @@ def control():
 def chat():
     data = request.json
     msg = data.get("message", "").strip()
-    group = data.get("group")
+    group = GROUP_TYPE
 
     if msg not in items:
         return jsonify({"reply": "请输入指定商品名称（A4纸、胶带、垃圾袋、纸杯、笔、牙刷）"})
